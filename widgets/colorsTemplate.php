@@ -121,29 +121,41 @@ class Elementor_colorsTemplate extends \Elementor\Widget_Base
 ?>
 
         <style>
-            .richText .imageContainer {
+            .colorsContainer .imageContainer {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
-                padding: 25px;
             }
 
-            .richText .imageContainer img {
+            .colorsContainer .imageContainer img {
                 width: 250px;
                 height: 250px;
                 object-fit: cover;
                 border-radius: 5px;
             }
 
+            .colorsContainer {
+                flex-direction: column;
+                gap: 25px;
+            }
+
             @media screen and (max-width: 600px) {
                 .richText h2 {
                     text-align: center;
+                }
+
+                .colorsContainer .imageContainer {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 15px;
                 }
             }
         </style>
 
         <div class="pageWidthFG">
-            <div class="greyBg richText pageWidth">
+            <div class="greyBg colorsContainer richText pageWidth">
                 <h2><?php echo $settings['title']; ?></h2>
                 <div class="imageContainer">
                     <?php foreach ($settings['repeater_field'] as $item) : ?>
