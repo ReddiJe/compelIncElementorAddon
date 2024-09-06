@@ -158,7 +158,7 @@ class Elementor_richText extends \Elementor\Widget_Base
             <div class="greyBg richText pageWidth">
                 <div class="richTextCentered">
                     <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
-                    123
+                    12345
                     <h2><?php echo $settings['title']; ?></h2>
                     <h3 class="bottomTitle">
                         <?php echo $settings['subtitle']; ?>
