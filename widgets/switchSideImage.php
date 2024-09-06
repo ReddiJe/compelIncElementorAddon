@@ -198,6 +198,10 @@ class Elementor_switchSideImage extends \Elementor\Widget_Base
                 display: none;
             }
 
+            .imageWithText.right .informationBlock {
+                padding-left: 25px;
+            }
+
             .rightImage .leftImageInner {
                 display: none;
             }
