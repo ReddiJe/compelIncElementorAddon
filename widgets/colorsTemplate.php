@@ -165,9 +165,9 @@ class Elementor_colorsTemplate extends \Elementor\Widget_Base
             .richText .imageContainer {
                 display: flex;
                 flex-wrap: wrap;
+                justify-content: space-between;
                 background-color: #eaeaea;
                 padding: 25px;
-                gap: 20px;
             }
 
             .richText .imageContainer img{
