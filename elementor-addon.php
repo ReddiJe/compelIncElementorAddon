@@ -25,6 +25,7 @@ function register_hello_world_widget( $widgets_manager ) {
 	require_once( __DIR__ . '/widgets/image.php' );
 	require_once( __DIR__ . '/widgets/projects.php' );
 	require_once( __DIR__ . '/widgets/animation.php' );
+	require_once( __DIR__ . '/widgets/colorsTemplate.php' );
 	
 
 
@@ -43,6 +44,7 @@ function register_hello_world_widget( $widgets_manager ) {
 	$widgets_manager->register( new \Elementor_image() );
 	$widgets_manager->register( new \Elementor_projects() );
 	$widgets_manager->register( new \Elementor_animation() );
+	$widgets_manager->register( new \Elementor_colorsTemplate() );
 
 }
 add_action( 'elementor/widgets/register', 'register_hello_world_widget' );
