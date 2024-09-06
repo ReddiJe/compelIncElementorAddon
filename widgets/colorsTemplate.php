@@ -42,25 +42,9 @@ class Elementor_colorsTemplate extends \Elementor\Widget_Base
         );
 
         $this->add_control(
-            'upperTitle',
-            [
-                'label' => esc_html__('Upper Title', 'elementor-addon'),
-                'type' => \Elementor\Controls_Manager::TEXTAREA,
-            ]
-        );
-
-        $this->add_control(
             'title',
             [
                 'label' => esc_html__('Title', 'elementor-addon'),
-                'type' => \Elementor\Controls_Manager::TEXTAREA,
-            ]
-        );
-
-        $this->add_control(
-            'subtitle',
-            [
-                'label' => esc_html__('Subtitle', 'elementor-addon'),
                 'type' => \Elementor\Controls_Manager::TEXTAREA,
             ]
         );
