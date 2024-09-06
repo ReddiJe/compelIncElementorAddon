@@ -121,10 +121,17 @@ class Elementor_colorsTemplate extends \Elementor\Widget_Base
 ?>
 
         <style>
+            .colorsContainer {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+            }
+
             .colorsContainer .imageContainer {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
+                gap: 15px;
             }
 
             .colorsContainer .imageContainer img {
@@ -132,11 +139,6 @@ class Elementor_colorsTemplate extends \Elementor\Widget_Base
                 height: 250px;
                 object-fit: cover;
                 border-radius: 5px;
-            }
-
-            .colorsContainer {
-                flex-direction: column;
-                gap: 25px;
             }
 
             @media screen and (max-width: 600px) {
