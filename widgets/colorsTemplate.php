@@ -168,7 +168,7 @@ class Elementor_colorsTemplate extends \Elementor\Widget_Base
                 gap: 25px;
             }
 
-            .richText .imageContainer{
+            .richText .imageContainer img{
                 max-width: 300px;
             }
         </style>
