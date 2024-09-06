@@ -121,70 +121,30 @@ class Elementor_colorsTemplate extends \Elementor\Widget_Base
 ?>
 
         <style>
-            .richText .bottomTitle {
-                font-weight: 500;
-            }
-
-            .richText .richTextCentered {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
-            }
-
-            .richTextCentered * {
-                max-width: 800px;
-            }
-
-            @media screen and (max-width: 600px) {
-                .richText .richTextCentered {
-                    padding: 0px;
-                }
-
-                .richText .upperTitle {
-                    justify-content: center;
-                    font-size: 10px;
-                }
-
-                .richText h2 {
-                    text-align: center;
-                }
-
-                .richText .bottomTitle {
-                    font-size: 1em;
-                    justify-content: center;
-                    text-align: center;
-                }
-
-                .richText .regularText {
-                    text-align: center;
-                }
-            }
-
             .richText .imageContainer {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
-                background-color: #eaeaea;
                 padding: 25px;
             }
 
-            .richText .imageContainer img{
-                max-width: 300px;
+            .richText .imageContainer img {
+                width: 250px;
+                height: 250px;
+                object-fit: cover;
                 border-radius: 5px;
+            }
+
+            @media screen and (max-width: 600px) {
+                .richText h2 {
+                    text-align: center;
+                }
             }
         </style>
 
         <div class="pageWidthFG">
             <div class="greyBg richText pageWidth">
-                <div class="richTextCentered">
-                    <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
-                    <h2><?php echo $settings['title']; ?></h2>
-                    <h3 class="bottomTitle">
-                        <?php echo $settings['subtitle']; ?>
-                    </h3>
-                </div>
+                <h2><?php echo $settings['title']; ?></h2>
                 <div class="imageContainer">
                     <?php foreach ($settings['repeater_field'] as $item) : ?>
                         <img src="<?php echo $item['image']['url']; ?>" alt="" />
