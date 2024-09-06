@@ -163,13 +163,16 @@ class Elementor_colorsTemplate extends \Elementor\Widget_Base
             }
 
             .richText .imageContainer {
+                display: flex;
+                flex-wrap: wrap;
                 background-color: #eaeaea;
                 padding: 25px;
-                gap: 25px;
+                gap: 20px;
             }
 
             .richText .imageContainer img{
                 max-width: 300px;
+                border-radius: 5px;
             }
         </style>
 
@@ -177,14 +180,10 @@ class Elementor_colorsTemplate extends \Elementor\Widget_Base
             <div class="greyBg richText pageWidth">
                 <div class="richTextCentered">
                     <p class="upperTitle"><?php echo $settings['upperTitle']; ?></p>
-                    12345
                     <h2><?php echo $settings['title']; ?></h2>
                     <h3 class="bottomTitle">
                         <?php echo $settings['subtitle']; ?>
                     </h3>
-                    <p class="regularText">
-                        <?php echo $settings['regularText']; ?>
-                    </p>
                 </div>
                 <div class="imageContainer">
                     <?php foreach ($settings['repeater_field'] as $item) : ?>
