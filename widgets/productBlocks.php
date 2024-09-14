@@ -184,6 +184,10 @@ class Elementor_productBlocks extends \Elementor\Widget_Base
                 height: 100%;
             }
 
+            .collectionContainer .collectionGrid .product.no-text img {
+                object-fit: cover;
+            }
+
             .collectionContainer .collectionGrid .product .imgContainer {
                 width: 100%;
                 height: 250px;
@@ -224,25 +228,25 @@ class Elementor_productBlocks extends \Elementor\Widget_Base
                         <?php echo $settings['count']; ?>
                     </p>
                 </div>
-                <div class="collectionGrid">
-                    <?php
-                    foreach ($settings['repeater_field'] as $item) :
-                    ?>
-                        <div class="product">
-                            <div class="imgContainer">
-                                <img src="<?php echo $item['image']['url']; ?>" alt="">
-                            </div>
-                            <h4>
-                                <?php echo $item['title']; ?>
-                            </h4>
-                            <p>
-                                <?php echo $item['description']; ?>
-                            </p>
+               <div class="collectionGrid">
+                <?php
+                foreach ($settings['repeater_field'] as $item) :
+                    $no_text_class = (empty($item['title']) && empty($item['description'])) ? 'no-text' : ''; ?>
+                    <div class="product <?php echo $no_text_class; ?>">
+                        <div class="imgContainer">
+                            <img src="<?php echo $item['image']['url']; ?>" alt="">
                         </div>
-                    <?php
-                    endforeach;
-                    ?>
-                </div>
+                        <?php if (!empty($item['title'])) : ?>
+                            <h4><?php echo $item['title']; ?></h4>
+                        <?php endif; ?>
+                        <?php if (!empty($item['description'])) : ?>
+                            <p><?php echo $item['description']; ?></p>
+                        <?php endif; ?>
+                    </div>
+                <?php
+                endforeach;
+                ?>
+            </div>
             </div>
         </div>
 
