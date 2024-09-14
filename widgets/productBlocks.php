@@ -154,9 +154,7 @@ protected function render()
                             <p><?php echo $item['description']; ?></p>
                         <?php endif; ?>
                     </div>
-                <?php
-                endforeach;
-                ?>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
